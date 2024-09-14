@@ -1,0 +1,358 @@
+/* Genel Stil */
+.site-title h2 {
+    font-family: 'Comic Neue', 'Comic Sans MS', sans-serif;
+    font-size: 1.8em; /* Daha kibar ve profesyonel görünüm */
+    color: #66ccff; /* Canlı ve profesyonel bir mavi */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle Glow (yumuşak parlama) efekti */
+@keyframes subtleGlow {
+    from {
+        text-shadow: 0 0 5px #ff6699, 0 0 10px #ff99cc, 0 0 15px #ffccff;
+    }
+    to {
+        text-shadow: 0 0 15px #ff99cc, 0 0 20px #ffccff, 0 0 25px #ff99ff;
+    }
+}
+
+/* Başlığın altındaki küçük metin */
+.site-title h2::after {
+    content: "Birlikte Oynayalım!";
+    font-size: 1.1em;
+    color: #ffcc00; /* Altın sarısı renk */
+    display: block;
+    margin-top: 5px;
+}
+
+
+
+/* Comic Neue yazı tipini Google Fonts üzerinden yükleyelim */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+body {
+    font-family: 'Comic Neue', 'Arial', sans-serif; /* Comic Neue yazı tipini buraya ekledik */
+    background: linear-gradient(to right, #ffdd88, #ff9966, #ff99cc); /* Hafif pastel tonlar */
+    text-align: center;
+    color: #333;
+    padding: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Başlık */
+.header {
+    background-color: #ff66cc; /* Arka plan rengini koruyoruz ama koyu yapıyoruz */
+    padding: 20px; /* Padding’i küçülttük */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px; /* Genişliği sınırlıyoruz */
+    margin: 0 auto; /* Ortalıyoruz */
+	animation: bounce 2s infinite; /* Hareket animasyonunu geri ekledik */
+
+}
+
+.header h1 {
+    color: #ffffff; /* Beyaz yazı rengi */
+    font-size: 2.5em; /* Daha kibar boyut */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Hafif gölge ile okunabilirliği artırıyoruz */
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #f0f0f0; /* Hafif gri yazı rengi */
+    margin-bottom: 10px;
+}
+
+/* Kategori Seçim Bölümü */
+.kategori-secim {
+    margin-top: 40px;
+}
+
+.kategori-secim h2 {
+    font-family: 'Comic Neue', 'Comic Sans MS', sans-serif;
+    font-size: 2.5em;
+    color: #ff6600; /* Canlı turuncu */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Hafif gölge */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.kategori-secim h2 i {
+    margin-right: 15px; /* İkon ile yazı arasına boşluk */
+    font-size: 1.2em; /* İkon boyutu */
+    color: #33cc33; /* İkona farklı bir renk */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Hafif ikon gölgesi */
+}
+.kategoriler {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Kategori Butonları */
+.kategori.buton {
+    background-color: #ffcc66;
+    padding: 15px 30px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #ff9933; /* Kenarlık efekti */
+}
+
+/* Farklı Buton Renkleri */
+.buton.egitici {
+    background-color: #0066cc; /* Koyu mavi */
+}
+
+.buton.bulmaca {
+    background-color: #cc6600; /* Koyu turuncu */
+}
+
+.buton.eglenceli {
+    background-color: #33cc33; /* Koyu yeşil */
+}
+
+.kategori.buton:hover {
+    background-color: #ff9933; /* Hover rengi */
+    transform: translateY(-5px); /* Hover sırasında hafif yukarı hareket */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Hover sırasında gölge artışı */
+}
+
+/* Butonların içindeki ikon */
+.kategori.buton i {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+/* Genel footer stilleri */
+footer {
+    margin-top: 50px;
+    font-size: 1.1em; /* Biraz daha küçük yazı boyutu */
+    color: #f0f0f0; /* Hafif açık beyaz tonları */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Daha belirgin gölge */
+    font-family: 'Comic Neue', 'Comic Sans MS', sans-serif;
+    background-color: #333; /* Footer arka planını koyu yapalım */
+    padding: 20px;
+    border-radius: 10px; /* Köşeleri yuvarlatalım */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Hafif gölge */
+    text-align: center;
+}
+
+/* Tasarımcı paragrafına özel stil */
+footer .designer {
+    font-size: 0.9em; /* Daha küçük yazı */
+    color: #ffcc00; /* Altın sarısı yazı rengi */
+    margin-top: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Hafif gölge */
+    font-style: italic; /* Eğik yazı */
+    animation: glow 2s ease-in-out infinite alternate; /* Parlama efekti ekledik */
+}
+
+/* Glow (parlama) efekti */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
+    }
+    to {
+        text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00;
+    }
+}
+
+
+
+
+/* Animasyon */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+/* Başlık */
+h2 {
+    font-size: 2.5em;
+    color: #ff66cc;
+    margin-bottom: 30px;
+}
+
+/* Kategori Filtreleme Formu */
+.filter-form {
+    margin-bottom: 20px;
+}
+
+.filter-form label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.filter-form select {
+    padding: 8px 12px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.filter-form select:focus {
+    border-color: #ff66cc;
+}
+
+.filter-form input[type="submit"] {
+    padding: 8px 20px;
+    font-size: 1em;
+    background-color: #ff66cc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-form input[type="submit"]:hover {
+    background-color: #ff3366;
+}
+
+/* Oyunlar Listesi */
+.oyunlar-listesi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Oyun Kartları */
+.oyun-card {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 15px;
+}
+
+.oyun-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Oyun Görüntüsü */
+.oyun-goruntusu {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Oyun Bilgileri */
+.oyun-info h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.oyun-info p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Oyna Butonu */
+.oyna-buton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6699;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.oyna-buton:hover {
+    background-color: #ff3366;
+}
+
+/* Geri Dön İkonu */
+.geri-don-ikon {
+    position: fixed;
+    top: 20px;  /* Üstten boşluk */
+    left: 20px; /* Soldan boşluk */
+    font-size: 2.5em; /* Büyük boyut */
+    color: #ff6699; /* Parlak pembe renk */
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000; /* Diğer öğelerin üstünde görünmesi için */
+}
+
+.geri-don-ikon:hover {
+    background-color: #ff3366; /* Hover sırasında koyu pembe */
+    transform: scale(1.1); /* Hover sırasında büyüme efekti */
+}
+
+.geri-don-ikon i {
+    margin-right: 0;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 600px) {
+    .geri-don-ikon {
+        font-size: 2em; /* Mobilde biraz daha küçük */
+        padding: 8px;
+    }
+}
+/* Kategori Başlığı */
+.kategori-baslik {
+    font-family: 'Comic Neue', 'Comic Sans MS', sans-serif; /* Eğlenceli yazı tipi */
+    font-size: 3em; /* Büyük boyut */
+    color: #ff6600; /* Canlı turuncu renk */
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Gölgelendirme */
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ffcc33, #ff9966); /* Arka plan geçişli renk */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Kutunun etrafında gölge */
+    animation: baslikAnimasyon 1.5s infinite alternate; /* Yumuşak animasyon */
+}
+
+/* Başlık için animasyon */
+@keyframes baslikAnimasyon {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+/* Başlığın yanındaki ikon */
+.kategori-baslik i {
+    margin-right: 15px;
+    font-size: 1.5em;
+    color: #ffffff;
+}
